@@ -95,7 +95,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
   //5.Cenario Login no Linkedin com campo Email vazio
-  it.only("Email vazio quando tenta acessar o Linkedin", () => {
+  it("Email vazio quando tenta acessar o Linkedin", () => {
     cy.visit('https://www.linkedin.com/login', {
       
  });
@@ -115,7 +115,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
   //6.Cenario Login no Linkedin com os campos Email e Senha vazios
-  it("Email e senha vazios quando tenta acessar o Linkedin", () => {
+  it.only("Email e senha vazios quando tenta acessar o Linkedin", () => {
     cy.visit('https://www.linkedin.com/login', {
      
  });
