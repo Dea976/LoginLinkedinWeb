@@ -6,34 +6,34 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 // funcionalidade
   describe("Teste no LinkedIn - Web com Edge", () => {
-// Simula o login no linkedin com dados v·lidos, dados invalidos e dados vazios
+// Simula o login no linkedin com dados v√°lidos, dados invalidos e dados vazios
     
   //1.Cenario Login no Linkedin com Sucesso
-  it("Login com sucesso", () => {
+  it.only("Login com sucesso", () => {
   //DADO (Given)
   // abrir a aplicacao
        cy.visit('https://www.linkedin.com/login', {
   });
     
-    // Esperando o campo de email aparecer e inserindo um email v·lido
+    // Esperando o campo de email aparecer e inserindo um email v√°lido
        cy.get('input#username')
          .should('be.visible')
-         .type('digitar seu email para testar'); // Substitua pelo seu email v·lido
+         .type('digitar seu email para testar'); // Substitua pelo seu email v√°lido
     
-    // Espera a p·gina carregar e inserir a senha
+    // Espera a p√°gina carregar e inserir a senha
        cy.get('input#password')
          .should('be.visible')
-         .type('Digitar sua senha para testar'); // Substitua pela sua senha v·lida
+         .type('Digitar sua senha para testar'); // Substitua pela sua senha v√°lida
     
     // Quando (When)     
-    // Clica no bot„o "Sign in"
+    // Clica no bot√£o "Sign in"
        cy.get('button[type="submit"]').click();
     
     //ENTAO (Then)   
-    // Verifica se a p·gina do Linkedin È carregada
+    // Verifica se a p√°gina do Linkedin √© carregada
        cy.url().should('include', '/feed/');
 
-    // Verifica se a p·gina do Linkedin est· visÌvel, apÛs o login
+    // Verifica se a p√°gina do Linkedin est√° vis√≠vel, ap√≥s o login
        cy.get('body').should('not.contain', 'Sign in');
     
   });
@@ -46,7 +46,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
    
        cy.get('input#username')
          .should('be.visible')
-         .type('alfa'); // Email inv·lido
+         .type('alfa'); // Email inv√°lido
     
        cy.get('button[type="submit"]').click();
 
@@ -54,7 +54,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
   });
 
-  //3.Cenario Login no Linkedin com campo Senha inv·lido
+  //3.Cenario Login no Linkedin com campo Senha inv√°lido
   it("Senha invalida quando tenta acessar o Linkedin", () => {
     cy.visit('https://www.linkedin.com/login', {
       
@@ -66,7 +66,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     
     cy.get('input#password')
       .should('be.visible')
-      .type('1223456'); //Senha Inv·lida 
+      .type('1223456'); //Senha Inv√°lida 
  
     cy.get('button[type="submit"]').click();
 
