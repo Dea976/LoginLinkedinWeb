@@ -9,7 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 // Simula o login no linkedin com dados válidos, dados invalidos e dados vazios
     
   //1.Cenario Login no Linkedin com Sucesso
-  it.only("Login com sucesso", () => {
+  it("Login com sucesso", () => {
   //DADO (Given)
   // abrir a aplicacao
        cy.visit('https://www.linkedin.com/login', {
@@ -39,7 +39,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
   //2.Cenario Login no Linkedin com campo Email invalido
-  it("Email invalido quando tenta acessar o Linkedin", () => {
+  it.only("Email invalido quando tenta acessar o Linkedin", () => {
        cy.visit('https://www.linkedin.com/login', {
          
     });
