@@ -39,7 +39,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
   //2.Cenario Login no Linkedin com campo Email invalido
-  it.only("Email invalido quando tenta acessar o Linkedin", () => {
+  it("Email invalido quando tenta acessar o Linkedin", () => {
        cy.visit('https://www.linkedin.com/login', {
          
     });
@@ -55,7 +55,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   });
 
   //3.Cenario Login no Linkedin com campo Senha inválido
-  it("Senha invalida quando tenta acessar o Linkedin", () => {
+  it.only("Senha invalida quando tenta acessar o Linkedin", () => {
     cy.visit('https://www.linkedin.com/login', {
       
  });
